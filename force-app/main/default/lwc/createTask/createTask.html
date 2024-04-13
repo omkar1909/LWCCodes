@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small">
+            </lightning-icon>
+                Create Task
+        </h3>
+
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="text" name="taskTitle" label="Task Title" value={taskTitle} onchange={handleOnChange} required></lightning-input>
+                <template lwc:if={isTaskTitle}>
+                <lightning-input type="Date" name="dueDate" label="Due Date" value={dueDate} onchange={handleOnChange} required></lightning-input>
+                </template>
+                <br/>
+                <template lwc:if={isDueDate}>
+                <lightning-button variant="success" label="Save Task" title="Save" onclick={handleClick} class="slds-m-left_x-small makeItTransperent"></lightning-button>
+                </template>
+            </div>
+        </div>
+
+    </lightning-card>
+</template>
