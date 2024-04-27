@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="create record using lightning record form">
+        <lightning-record-form 
+        object-api-name={objectName} 
+        fields={fieldList} 
+        onsuccess={successHandler}>
+        </lightning-record-form>
+    </lightning-card>
+
+    <lightning-card title="display record using lightning record form">
+        <lightning-record-form  
+        record-id="0015g00001eKMI7AAO"
+        object-api-name={objectName} 
+        fields={fieldList}
+        mode="readonly">
+        </lightning-record-form>
+    </lightning-card>
+</template>
